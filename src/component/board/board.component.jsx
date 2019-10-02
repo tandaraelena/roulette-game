@@ -27,11 +27,11 @@ const Board = () => {
       color: n % 2 ? 'red' : 'black',
     })),
   ]
-console.log(slotList)
+// console.log(slotList)
 
   return (
   <StyledBoard size={350} >
-    <Slot />
+    {slotList.map(slot => <Slot {...slot}/>)}
   </StyledBoard>
   )
 }
