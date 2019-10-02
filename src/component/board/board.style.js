@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+export const StyledBoardWrapper = styled.div`
+  position: relative;
+`
+
 export const StyledBoard = styled.div`
   color: red;
   border-radius: 50%;
