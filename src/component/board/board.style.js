@@ -6,4 +6,16 @@ export const StyledBoard = styled.div`
   width: ${({ size }) => `${size}px`};
   height: ${({ size }) => `${size}px`};
   background-color: #C6682A;
+  position: relative;
+
+  &::after{
+    content: '';
+    width: 250px;
+    height: 250px;
+    top: 50px;
+    left: 50px;
+    background-color: #faa918;
+    position: absolute;
+    border-radius: 50%;
+  }
 `
