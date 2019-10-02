@@ -4,8 +4,8 @@ import Board from '../board'
 const App = () => {
   return (
     <div>
-      <Board />
       App
+      <Board />
     </div>
   )
 }

@@ -5,5 +5,5 @@ export const StyledBoard = styled.div`
   border-radius: 50%;
   width: ${({ size }) => `${size}px`};
   height: ${({ size }) => `${size}px`};
-  background-color: grey;
+  background-color: #C6682A;
 `
