@@ -6,10 +6,12 @@ export const StyledSlot = styled.div`
   position: relative;
   display: inline-block;
   margin-left: 165px;
+  transform: rotate(20deg);
+  transform-origin: 50% 100%;
 
   &::after{
-    content: '1';
-    color: #000;
+    content: ${({ number }) => `"${number}"`};
+    color: black;
     position: relative;
   }
   &::before{
