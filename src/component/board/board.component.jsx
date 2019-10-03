@@ -5,6 +5,7 @@ import Ball from '../ball'
 import Selected from '../selected'
 
 const Board = () => {
+  const [selected, setSelected] = useState(null)
   const [ winner, setWinner ] = useState({ animationPlayState: 'paused' })
 // console.log(winner)
   const length = 18
@@ -43,14 +44,18 @@ const Board = () => {
     // console.log(slotList[randomNumber])
   }
 
+  const handleSelect = (key, multiplier) => {
+    setSelected({key, multiplier})
+  }
+
   return (
     <StyledBoardWrapper>
       <StyledBoard size={350} >
         {slotList.map(slot => <Slot key={slot.number} {...slot} />)}
       </StyledBoard>
       <Ball winner={winner}/>
-      <button onClick={bet}>BET</button>
-      <Selected slotList={slotList}/>
+      {selected && <button onClick={bet}>Spin it</button>}
+      <Selected slotList={slotList} handleSelect={handleSelect} />
     </StyledBoardWrapper>
   )
 }
