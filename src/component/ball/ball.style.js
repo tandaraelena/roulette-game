@@ -9,6 +9,7 @@ export const StyledBall = styled.div`
   transform: rotate(20deg);
   transform-origin: 50% 100%;
   animation: spin 5s ease-out forwards;
+  animation-play-state: ${({ winner }) => winner.animationPlayState};
 
   &::after{
     content: '';
@@ -23,6 +24,6 @@ export const StyledBall = styled.div`
 
   @keyframes spin {
     from { transform: rotate(0deg); }
-    to { transform: rotate(1440deg); }
+    to { transform: rotate(${({ winner }) => winner.rotation}deg); }
   }
 `
