@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { StyledBoard, StyledBoardWrapper } from './board.style'
 import Slot from '../slot'
 import Ball from '../ball'
+import Selected from '../selected'
 
 const Board = () => {
   const [ winner, setWinner ] = useState({ animationPlayState: 'paused' })
@@ -49,6 +50,7 @@ const Board = () => {
       </StyledBoard>
       <Ball winner={winner}/>
       <button onClick={bet}>BET</button>
+      <Selected slotList={slotList}/>
     </StyledBoardWrapper>
   )
 }
