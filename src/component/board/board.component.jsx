@@ -56,8 +56,9 @@ const Board = () => {
         0: 'even',
         1: 'odd',
       }
-
       showMessage(object[+slotList[randomNumber].number % 2] === key, multiplier)
+    } else if(['black', 'red'].includes(key)){
+      showMessage(slotList[randomNumber].color === key, multiplier)
     }
   }
 
